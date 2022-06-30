@@ -27,7 +27,7 @@ module "eks" {
 #       asg_desired_capacity          = 1
 #     },
 #   ]
-# }
+ }
 
 data "aws_eks_cluster" "cluster" {
   name = module.eks.cluster_id
