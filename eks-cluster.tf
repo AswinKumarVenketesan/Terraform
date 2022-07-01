@@ -12,27 +12,27 @@ module "eks" {
   }
 
 eks-kube-nodes = {
-      desired_capacity = 1
-      max_capacity     = 2
-      min_capacity     = 1
-      instance_types = ["t3a.medium"]
-      disk_size = "50"
-      disk_type = "gp3"
-      disk_encrypted = true
-      #disk_kms_key_id = aws_kms_key.eksCmk.arn
-      create_launch_template = true
-      launch_template_id      = aws_launch_template.eks-kube-nodes.id
-      launch_template_version = aws_launch_template.eks-kube-nodes.default_version
-      k8s_labels = {
-        name = "kubenodes"
-      }
-      additional_tags = {
-      Name = "eks-gpms-prod-nodes"
+  desired_capacity = 1
+  max_capacity     = 2
+  min_capacity     = 1
+  instance_types = ["t3a.medium"]
+  disk_size = "50"
+  disk_type = "gp3"
+  disk_encrypted = true
+  #disk_kms_key_id = aws_kms_key.eksCmk.arn
+  create_launch_template = true
+  launch_template_id      = aws_launch_template.eks-kube-nodes.id
+  launch_template_version = aws_launch_template.eks-kube-nodes.default_version
+  k8s_labels = {
+    name = "kubenodes"
+  }
+  additional_tags = {
+  Name = "eks-gpms-prod-nodes"
 
-      }
+  }
 
-      tags_all = {
-      Name = "eks-gpms-prod-nodes"
+  tags_all = {
+  Name = "eks-gpms-prod-nodes"
 
       }
     }
