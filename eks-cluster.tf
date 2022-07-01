@@ -10,7 +10,7 @@ module "eks" {
   workers_group_defaults = {
     root_volume_type = "gp3"
   }
-
+node_groups = {
 eks-kube-nodes = {
   desired_capacity = 1
   max_capacity     = 2
