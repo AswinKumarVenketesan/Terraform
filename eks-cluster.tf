@@ -27,12 +27,12 @@ eks-kube-nodes = {
     name = "kubenodes"
   }
   additional_tags = {
-  Name = "eks-gpms-prod-nodes"
+  Name = "eks-nodes"
 
   }
 
   tags_all = {
-  Name = "eks-gpms-prod-nodes"
+  Name = "eks-nodes"
 
       }
     }
